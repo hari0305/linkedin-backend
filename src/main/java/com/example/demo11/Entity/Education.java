@@ -10,12 +10,21 @@ public class Education {
     @GeneratedValue
     public int id;
 
+    @Column(name = "name")
     public String name;
-    public String description;
-    public Date start_date;
-    public Date end_date;
 
+    @Column(name="description")
+    public String description;
+
+    @Column(name="start_date")
+    public Date startDate;
+
+    @Column(name="end_date")
+    public Date endDate;
+
+    @Column(name="degree")
     public  String degree;
+    @Column(name="branch")
     public String branch;
 
     @ManyToOne
@@ -32,16 +41,16 @@ public class Education {
         return description;
     }
 
-    public Date getEnd_date() {
-        return end_date;
-    }
-
-    public Date getStart_date() {
-        return start_date;
-    }
-
     public String getName() {
         return name;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public Date getStartDate() {
+        return startDate;
     }
 
     public User getUser() {
@@ -64,13 +73,14 @@ public class Education {
         this.description = description;
     }
 
-    public void setEnd_date(Date end_date) {
-        this.end_date = end_date;
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 
-    public void setStart_date(Date start_date) {
-        this.start_date = start_date;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
+
 
     public void setName(String name) {
         this.name = name;

@@ -25,8 +25,8 @@ public class EducationService {
     public Education create(Education education, int lid){
         Education temp = new Education();
         temp.setName(education.name);
-        temp.setStart_date(education.start_date);
-        temp.setEnd_date(education.end_date);
+        temp.setStartDate(education.startDate);
+        temp.setStartDate(education.endDate);
         temp.setDescription(education.description);
         temp.setBranch(education.branch);
         temp.setDegree(education.degree);

@@ -21,7 +21,7 @@ com/example/demo11/Repository/LoginRepository.class
 com/example/demo11/Entity/Experience.class
 com/example/demo11/Service/EducationService.class
 com/example/demo11/Entity/Skill.class
-com/example/demo11/Repository/SkillRepository.class
 com/example/demo11/Service/UserService.class
 com/example/demo11/Controller/ExperienceController.class
+main/java/com/example/demo11/Repository/SkillRepository.class
 com/example/demo11/Service/skillTypeService.class

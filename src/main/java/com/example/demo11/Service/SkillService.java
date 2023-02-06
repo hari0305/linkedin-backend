@@ -1,7 +1,6 @@
 package com.example.demo11.Service;
 
 import com.example.demo11.Entity.Skill;
-import com.example.demo11.Entity.SkillType;
 import com.example.demo11.Repository.LoginRepository;
 import com.example.demo11.Repository.SkillRepository;
 import com.example.demo11.Repository.SkillTypeRepository;

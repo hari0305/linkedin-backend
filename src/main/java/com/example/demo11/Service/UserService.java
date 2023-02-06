@@ -19,7 +19,7 @@ public class UserService {
 
     public void createUser(User user, int lid) {
         Login temp = loginRepository.findById(lid).orElse(null);
-        User u1 = new User(user.getFirst_name(),user.getLast_name(),user.getEmail(),user.getCity(),temp);
+        User u1 = new User(user.getFirstName(),user.getLastName(),user.getEmail(),user.getCity(),temp);
         userRepository.save(u1);
     }
 

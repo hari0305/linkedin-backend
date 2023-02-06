@@ -12,14 +12,14 @@ public class Skill {
 
     @OneToOne
     @JoinColumn(name="skill_type_id",referencedColumnName = "id")
-    public SkillType skill_type_id;
+    public SkillType skillTypeId;
 
     @ManyToOne
     @JoinColumn(name="user_id",referencedColumnName = "id")
     public User user;
 
-    public Skill(SkillType typid, User user){
-        this.skill_type_id = typid;
+    public Skill(SkillType typeid, User user){
+        this.skillTypeId = typeid;
         this.user = user;
     }
 

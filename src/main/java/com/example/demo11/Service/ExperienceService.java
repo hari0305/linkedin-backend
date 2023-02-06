@@ -25,8 +25,8 @@ public class ExperienceService {
         Experience temp = new Experience();
         temp.setDescription(experience.description);
         temp.setName(experience.name);
-        temp.setStart_date(experience.start_date);
-        temp.setEnd_date(experience.end_date);
+        temp.setStartDate(experience.startDate);
+        temp.setEndDate(experience.endDate);
         temp.setTitle(experience.title);
         temp.setUser(userRepository.findByEmail(loginRepository.findById(id).orElse(null).getEmail()));
         return experienceRepository.save(temp);
@@ -40,6 +40,7 @@ public class ExperienceService {
         experienceRepository.deleteById(id);
         return true;
     }
+
 
     public List<Experience> get(int lid){
         return experienceRepository.findExperiencesByUser(userRepository.findByEmail(loginRepository.findById(lid).orElse(null).getEmail()));

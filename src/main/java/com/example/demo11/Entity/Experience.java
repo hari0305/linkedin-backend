@@ -13,10 +13,15 @@ public class Experience {
     @GeneratedValue
     int id;
 
+    @Column(name="name")
     public String name;
+    @Column(name="description")
     public String description;
-    public Date start_date;
-    public Date end_date;
+    @Column(name="start_date")
+    public Date startDate;
+    @Column(name="end_date")
+    public Date endDate;
+    @Column(name="title")
     public String title;
 
     @ManyToOne
@@ -26,8 +31,8 @@ public class Experience {
     public Experience(String name, String description, Date start_date, Date end_date, String title){
         this.name = name;
         this.description = description;
-        this.start_date = start_date;
-        this.end_date = end_date;
+        this.startDate = start_date;
+        this.endDate = end_date;
         this.title = title;
     }
 
@@ -41,12 +46,13 @@ public class Experience {
         return description;
     }
 
-    public Date getEnd_date() {
-        return end_date;
+
+    public Date getStartDate() {
+        return startDate;
     }
 
-    public Date getStart_date() {
-        return start_date;
+    public Date getEndDate() {
+        return endDate;
     }
 
     public String getName() {
@@ -57,12 +63,12 @@ public class Experience {
         return title;
     }
 
-    public void setStart_date(Date start_date) {
-        this.start_date = start_date;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
 
-    public void setEnd_date(Date end_date) {
-        this.end_date = end_date;
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 
     public void setDescription(String description) {

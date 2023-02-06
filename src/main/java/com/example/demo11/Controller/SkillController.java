@@ -3,6 +3,7 @@ package com.example.demo11.Controller;
 import com.example.demo11.Entity.Skill;
 import com.example.demo11.Service.SkillService;
 import com.example.demo11.Entity.SkillType;
+import com.example.demo11.Service.SkillService;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

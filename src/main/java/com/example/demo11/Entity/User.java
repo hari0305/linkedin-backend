@@ -11,13 +11,22 @@ public class User {
     @Id
     @GeneratedValue
     int id;
+    @Column(name="description")
     String description;
-    String first_name;
-    String last_name;
+
+    @Column(name="first_name")
+    String firstName;
+    @Column(name="last_name")
+    String lastName;
+    @Column(name="phone")
     String phone;
+    @Column(name="email")
     String email;
+    @Column(name="city")
     String city;
+    @Column(name="state")
     String state;
+    @Column(name="country")
     String country;
 
     @OneToOne
@@ -29,8 +38,8 @@ public class User {
     }
 
     public User(String first_name, String last_name, String email, String city, Login login, String description, String state, String country, String phone){
-        this.first_name = first_name;
-        this.last_name = last_name;
+        this.firstName = first_name;
+        this.lastName = last_name;
         this.email = email;
         this.city = city;
         this.description = description;
@@ -41,8 +50,8 @@ public class User {
     }
 
     public User(String first_name, String last_name, String email, String city, Login login){
-        this.first_name = first_name;
-        this.last_name = last_name;
+        this.firstName = first_name;
+        this.lastName = last_name;
         this.email = email;
         this.city = city;
         this.login = login;
@@ -50,8 +59,8 @@ public class User {
 
     public User(int id,String first_name, String last_name, String email, String city, Login login){
         this.id = id;
-        this.first_name = first_name;
-        this.last_name = last_name;
+        this.firstName = first_name;
+        this.lastName = last_name;
         this.email = email;
         this.city = city;
         this.login = login;
@@ -71,14 +80,12 @@ public class User {
         return description;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getFirstName() {
+        return firstName;
     }
-
-    public String getFirst_name() {
-        return first_name;
+    public String getLastName() {
+        return lastName;
     }
-
     public String getPhone() {
         return phone;
     }

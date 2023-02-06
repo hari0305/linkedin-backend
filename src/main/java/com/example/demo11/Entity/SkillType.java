@@ -1,9 +1,6 @@
 package com.example.demo11.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="skill_type")
@@ -13,11 +10,12 @@ public class SkillType {
     @GeneratedValue
     public int id;
 
-    public String skill_name;
+    @Column(name="skill_name")
+    public String skillName;
 
     public SkillType(){}
 
     public SkillType(String name){
-        this.skill_name = name;
+        this.skillName = name;
     }
 }
